@@ -80,5 +80,55 @@ HttpSwift.request("POST", url: url, params: ["post": "value"]) { (data, response
     }
 }
 ```
+## 更多方法请求
 
+### POST
 
+- POST不带参数
+```swift
+HttpSwift.post(url, callback: { (data, response, error) -> Void in
+    //使用guard判断
+    guard error != nil else{
+        print(data)
+        print("POST不带参数 请求成功")
+        return
+    }
+})
+```
+- POST带参数
+```swift
+HttpSwift.post(url, params: ["post": "POST Network"], callback: { (data, response, error) -> Void in
+    let string = data
+    //使用guard判断
+    guard error != nil else{
+        print(data)
+        print("POST 2 请求成功 \(string)")
+        return
+    }
+})
+```
+### GET
+- GET不带参数
+```swift
+HttpSwift.get(url, callback: { (data, response, error) -> Void in
+    let string = data
+    //使用guard判断
+    guard error != nil else{
+        print(data)
+        print("GET不带参数 请求成功 \(string)")
+        return
+    }
+})
+```
+- GET带参数
+```swift
+HttpSwift.get(url, params: ["get": "POST Network"], callback: { (data, response, error) -> Void in
+    let string = data
+    //使用guard判断
+    guard error != nil else{
+        print(data)
+        print("GET带参数 请求成功 \(string)")
+        return
+    }
+})
+```
