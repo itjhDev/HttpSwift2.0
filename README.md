@@ -45,7 +45,7 @@ import HttpSwift
 
 ## 使用
 
-###GET
+### GET
 
 ```swift
 HttpSwift.request("get", url: url) { (data, response, error) -> Void in
@@ -56,7 +56,15 @@ HttpSwift.request("get", url: url) { (data, response, error) -> Void in
     }
  }
 ```
-
+#### 打印结果
+```shell
+  返回结果
+ {
+    "weatherinfo":
+    {"city":"太仓","cityid":"101190408","temp":"13","WD":"西北风","WS":"3级","SD":"93%","WSE":"3","time":"10:20","isR        adar":"0","Radar":"","njd":"暂无实况","qy":"1005"
+    }
+ }
+```
 
 
 
