@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //天气的url
     let url = "http://www.weather.com.cn/adat/sk/101190408.html"
     
+    
     /*
     返回结果
     {
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,6 +43,8 @@ class ViewController: UIViewController {
             //使用guard判断
             guard error != nil else{
                 print(data)
+               
+                
                 return
             }
             
@@ -55,6 +59,7 @@ class ViewController: UIViewController {
             //使用guard判断
             guard error != nil else{
                 print(data)
+                
                 return
             }
             
