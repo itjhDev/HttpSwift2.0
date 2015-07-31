@@ -39,12 +39,9 @@ class ViewController: UIViewController {
     @IBAction func getRequest(sender: UIButton) {
         
         HttpSwift.request("get", url: url) { (data, response, error) -> Void in
-            
             //使用guard判断
             guard error != nil else{
                 print(data)
-               
-                
                 return
             }
             
@@ -55,7 +52,7 @@ class ViewController: UIViewController {
     @IBAction func postRequest(sender: UIButton) {
         
         
-        HttpSwift.request("get", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
+        HttpSwift.request("POST", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
             //使用guard判断
             guard error != nil else{
                 print(data)
@@ -64,6 +61,55 @@ class ViewController: UIViewController {
             }
             
         }
+        
+        let url = "http://pitayaswift.sinaapp.com/pitaya.php"
+        
+        HttpSwift.post(url, callback: { (data, response, error) -> Void in
+            //使用guard判断
+            guard error != nil else{
+                print(data)
+                print("POST不带参数 请求成功")
+                return
+            }
+            
+        })
+        HttpSwift.post(url, params: ["post": "POST Network"], callback: { (data, response, error) -> Void in
+            let string = data
+            
+            //使用guard判断
+            guard error != nil else{
+                print(data)
+                print("POST 2 请求成功 \(string)")
+                return
+            }
+        })
+        
+        HttpSwift.get(url, callback: { (data, response, error) -> Void in
+            let string = data
+            
+            //使用guard判断
+            guard error != nil else{
+                print(data)
+                print("GET不带参数 请求成功 \(string)")
+                return
+            }
+        })
+        HttpSwift.get(url, params: ["get": "POST Network"], callback: { (data, response, error) -> Void in
+            let string = data
+            
+            //使用guard判断
+            guard error != nil else{
+                print(data)
+                print("GET带参数 请求成功 \(string)")
+                return
+            }
+        })
+        
+        HttpSwift.request("GET", url: url, params: ["get": "Request Network"]) { (data, response, error) -> Void in
+            let string = data
+            print("Request 请求成功 \(string)")
+        }
+        
     }
 
 }
