@@ -4,6 +4,8 @@ Swift2.0封装http请求
 
 由于现在Swift2.0是beta版本，一些github上网络请求的框架不能使用，自己封装了一下！！
 
+有问题可以发送邮件iosdev@itjh.com.cn, QQ群：383126909 IT江湖
+
 感谢@johnlui 提供的Swift-On-iOS，Alamofire框架的函数
 
 ## 解决Swift2.0 请求http api不成功方案
