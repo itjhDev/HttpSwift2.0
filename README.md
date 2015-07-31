@@ -72,7 +72,7 @@ HttpSwift.request("get", url: url) { (data, response, error) -> Void in
 
 params:请求参数 
 
-HttpSwift.request("get", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
+HttpSwift.request("POST", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
     //使用guard判断
     guard error != nil else{
       print(data) 
