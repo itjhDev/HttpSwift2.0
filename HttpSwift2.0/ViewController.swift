@@ -47,7 +47,19 @@ class ViewController: UIViewController {
         }
         
     }
-
+    /*测试POST请求*/
+    @IBAction func postRequest(sender: UIButton) {
+        
+        
+        HttpSwift.request("get", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
+            //使用guard判断
+            guard error != nil else{
+                print(data)
+                return
+            }
+            
+        }
+    }
 
 }
 

@@ -21,7 +21,7 @@ class HttpSwift {
         let session = NSURLSession.sharedSession()
         
         var newURL = url
-        
+        /* GET */
         //判断请求方法
         if method == "GET"{
             //拼接url
@@ -30,6 +30,14 @@ class HttpSwift {
         }
         //进行网络请求，返回结果 闭包
         let request = NSMutableURLRequest(URL:NSURL(string: url)!)
+        request.HTTPMethod = method
+        
+        /* POST */
+        if method == "POST" {
+            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.HTTPBody = HttpSwift().buildParams(params).dataUsingEncoding(NSUTF8StringEncoding)
+        }
+        
         let task = session.dataTaskWithRequest(request,completionHandler: { (data, response, error) -> Void in
             callback(data: NSString(data: data!, encoding: NSUTF8StringEncoding), response: response, error: error)
         })
