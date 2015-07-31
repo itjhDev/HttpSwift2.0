@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A235d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Tp-fN-UxF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HttpSwift2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-125" y="445"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eOG-WT-Sfu">
+            <objects>
+                <viewController id="6Tp-fN-UxF" customClass="ViewController" customModule="HttpSwift2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fZg-C4-qe3"/>
+                        <viewControllerLayoutGuide type="bottom" id="saj-0a-mrx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="97h-Dw-3z5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cJ-7P-VoN">
+                                <rect key="frame" x="66" y="269" width="70" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wpu-1J-8BD"/>
+                                </constraints>
+                                <state key="normal" title="GET请求"/>
+                                <connections>
+                                    <action selector="getRequest:" destination="6Tp-fN-UxF" eventType="touchUpInside" id="nwn-dL-ggg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-Xl-hzh">
+                                <rect key="frame" x="193" y="269" width="70" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e1g-PR-MRc"/>
+                                </constraints>
+                                <state key="normal" title="POST请求"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="saj-0a-mrx" firstAttribute="top" secondItem="gfV-Xl-hzh" secondAttribute="bottom" constant="269" id="4ad-kO-zHy"/>
+                            <constraint firstItem="7cJ-7P-VoN" firstAttribute="top" secondItem="fZg-C4-qe3" secondAttribute="bottom" constant="249" id="AHi-Um-iZg"/>
+                            <constraint firstItem="7cJ-7P-VoN" firstAttribute="width" secondItem="gfV-Xl-hzh" secondAttribute="width" id="Le5-UM-2ce"/>
+                            <constraint firstItem="saj-0a-mrx" firstAttribute="top" secondItem="7cJ-7P-VoN" secondAttribute="bottom" constant="269" id="QLE-DE-vtG"/>
+                            <constraint firstItem="gfV-Xl-hzh" firstAttribute="top" secondItem="fZg-C4-qe3" secondAttribute="bottom" constant="249" id="ZMr-7e-tAu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gfV-Xl-hzh" secondAttribute="trailing" constant="41" id="hWX-Lp-vIR"/>
+                            <constraint firstItem="7cJ-7P-VoN" firstAttribute="leading" secondItem="97h-Dw-3z5" secondAttribute="leadingMargin" constant="50" id="iUs-Ku-ZGi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfY-nt-l9e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="300"/>
+        </scene>
+    </scenes>
+</document>
