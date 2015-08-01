@@ -134,3 +134,5 @@ HttpSwift.get(url, params: ["get": "POST Network"], callback: { (data, response,
     }
 })
 ```
+
+未完待续 PUT DELETE等请求方法
