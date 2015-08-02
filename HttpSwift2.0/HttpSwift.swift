@@ -59,6 +59,12 @@ class HttpSwift {
         let manager = HttpSwiftManager(url: url, method: "PUT", params: params, callback: callback)
         manager.fire()
     }
+    
+    /*DELETE请求，带参数*/
+    static func delete(url: String, params: Dictionary<String, AnyObject>, callback: (data: NSString!, response: NSURLResponse!, error: NSError!) -> Void) {
+        let manager = HttpSwiftManager(url: url, method: "DELETE", params: params, callback: callback)
+        manager.fire()
+    }
 
     
     
