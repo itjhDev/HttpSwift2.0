@@ -48,6 +48,13 @@ class HttpSwift {
         manager.fire()
     }
     
+    /*PUT请求，带参数*/
+    static func put(url: String, params: Dictionary<String, AnyObject>, callback: (data: NSString!, response: NSURLResponse!, error: NSError!) -> Void) {
+        let manager = HttpSwiftManager(url: url, method: "PUT", params: params, callback: callback)
+        manager.fire()
+    }
+
+    
     
 }
 

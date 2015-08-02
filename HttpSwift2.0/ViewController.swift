@@ -62,7 +62,7 @@ class ViewController: UIViewController {
             
         }
         
-        let url = "http://pitayaswift.sinaapp.com/pitaya.php"
+        //let url = "http://pitayaswift.sinaapp.com/pitaya.php"
         
         HttpSwift.post(url, callback: { (data, response, error) -> Void in
             //使用guard判断
@@ -104,6 +104,17 @@ class ViewController: UIViewController {
                 return
             }
         })
+        
+        HttpSwift.put(url, params: ["get": "POST Network"]) { (data, response, error) -> Void in
+            let string = data
+
+            //使用guard判断
+            guard error != nil else{
+                print(data)
+                print("PUT带参数 请求成功 \(string)")
+                return
+            }
+        }
         
         HttpSwift.request("GET", url: url, params: ["get": "Request Network"]) { (data, response, error) -> Void in
             let string = data
