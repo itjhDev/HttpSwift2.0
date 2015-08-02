@@ -135,4 +135,17 @@ HttpSwift.get(url, params: ["get": "POST Network"], callback: { (data, response,
 })
 ```
 
+- PUT带参数
+```swift
+HttpSwift.put(url, params: ["put": "POST Network"], callback: { (data, response, error) -> Void in
+    let string = data
+    //使用guard判断
+    guard error != nil else{
+        print(data)
+        print("put带参数 请求成功 \(string)")
+        return
+    }
+})
+```
+
 未完待续 PUT DELETE等请求方法
