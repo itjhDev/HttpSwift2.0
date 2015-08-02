@@ -98,6 +98,7 @@
 				TargetAttributes = {
 					AB3C7D1D1B6B12B4004BDC94 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 587PLL658T;
 					};
 				};
 			};
@@ -250,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HttpSwift2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.itjh.HttpSwift2-0";
@@ -261,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HttpSwift2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.itjh.HttpSwift2-0";
@@ -287,6 +290,7 @@
 				AB3C7D321B6B12B4004BDC94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
