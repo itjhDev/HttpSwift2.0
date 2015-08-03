@@ -105,7 +105,7 @@ class ViewController: UIViewController {
             }
         })
         
-        HttpSwift.put(url, params: ["get": "POST Network"]) { (data, response, error) -> Void in
+        HttpSwift.put(url, params: ["put": "POST Network"]) { (data, response, error) -> Void in
             let string = data
 
             //使用guard判断
@@ -114,6 +114,15 @@ class ViewController: UIViewController {
                 print("PUT带参数 请求成功 \(string)")
                 return
             }
+        }
+        
+        HttpSwift.delete(url, params: ["id":122]) { (data, response, error) -> Void in
+            guard error != nil else{
+                print(data)
+                print("DELETE带参数 请求成功\(data)")
+                return
+            }
+            
         }
         
         HttpSwift.request("GET", url: url, params: ["get": "Request Network"]) { (data, response, error) -> Void in
