@@ -148,4 +148,16 @@ HttpSwift.put(url, params: ["put": "POST Network"], callback: { (data, response,
 })
 ```
 
+- DELETE带参数
+```swift
+HttpSwift.delete(url, params: ["id":122]) { (data, response, error) -> Void in
+    guard error != nil else{
+        print(data)
+        print("DELETE带参数 请求成功\(data)")
+        return
+    }
+}
+```
+
+
 未完待续 PUT DELETE等请求方法
