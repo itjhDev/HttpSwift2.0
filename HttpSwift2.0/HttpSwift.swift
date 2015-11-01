@@ -153,6 +153,7 @@ class HttpSwiftManager {
     
     func escape(string: String) -> String {
         let legalURLCharactersToBeEscaped: CFStringRef = ":&=;+!@#$()',*"
+        
         return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
     }
     
