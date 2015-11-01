@@ -41,6 +41,13 @@ Swift2.0封装http请求
 - Xcode7 bete4 
 - Swift2.0 beta
 
+Installation
+==========================
+#### Cocoapod Method:-
+
+`pod 'HttpSwift2.0', '~> 1.3'`
+
+
 ```swift
 import HttpSwift
 ```

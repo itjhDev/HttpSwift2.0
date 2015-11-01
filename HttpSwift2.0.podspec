@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HttpSwift2.0"
-  s.version      = "1.2"
+  s.version      = "1.3"
   s.summary      = "httpSwift2.0 HttpClient"
 
   s.homepage     = "https://github.com/itjhDev/HttpSwift2.0"
