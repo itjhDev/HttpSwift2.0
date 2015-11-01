@@ -109,7 +109,8 @@ class HttpSwiftManager {
         }
     }
     func fireTask() {
-         task = session.dataTaskWithRequest(request,completionHandler: { (data, response, error) -> Void in
+        
+        task = session.dataTaskWithRequest(request,completionHandler: { (data, response, error) -> Void in
             self.callback(data: NSString(data: data!, encoding: NSUTF8StringEncoding), response: response, error: error)
         })
         task.resume()
@@ -126,7 +127,9 @@ class HttpSwiftManager {
             //拼接url
             components += self.queryComponents(key, value)
         }
-        return "&".join( components.map{"\($0)=\($1)"} as [String])
+       
+        return (components.map { "\($0)=\($1)" } as [String]).joinWithSeparator("&")
+
     }
     
     
@@ -141,7 +144,7 @@ class HttpSwiftManager {
                 components += queryComponents("\(key)", value)
             }
         } else {
-            components.extend([(escape(key), escape("\(value)"))])
+            components.appendContentsOf([(escape(key), escape("\(value)"))])
         }
         
         return components
