@@ -1,5 +1,7 @@
 ## HttpSwift2.0
 
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/itjhDev/HttpSwift2.0/blob/master/LICENSE)
+
 Swift2.0封装http请求
 
 由于现在Swift2.0是beta版本，一些github上网络请求的框架不能使用，自己封装了一下！！
