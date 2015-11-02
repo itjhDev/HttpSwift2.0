@@ -1,8 +1,6 @@
 ## HttpSwift2.0
 
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/itjhDev/HttpSwift2.0/blob/master/LICENSE)
-
-[![Packagist](https://img.shields.io/badge/Language-swift2-blue.svg)](https://developer.apple.com/swift/)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/itjhDev/HttpSwift2.0/blob/master/LICENSE)  [![Packagist](https://img.shields.io/badge/Language-swift2-blue.svg)](https://developer.apple.com/swift/)
 
 
 Swift2.0封装http请求
