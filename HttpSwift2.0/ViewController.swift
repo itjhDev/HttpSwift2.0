@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     //天气的url
-    let url = "http://www.weather.com.cn/adat/sk/101190408.html"
+    let url = "http://www.weather.com.cn/adat/sk/1121190408.html"
     
     
     
@@ -56,48 +56,48 @@ class ViewController: UIViewController {
     @IBAction func postRequest(sender: UIButton) {
         
         
-//        HttpSwift.request("POST", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
-//            //使用guard判断
-//            guard error != nil else{
-//                print(data)
-//                
-//                return
-//            }
-//            
-//        }
-//        
-//        //let url = "http://pitayaswift.sinaapp.com/pitaya.php"
-//        
-//        HttpSwift.post(url, callback: { (data, response, error) -> Void in
-//            //使用guard判断
-//            guard error != nil else{
-//                print(data)
-//                print("POST不带参数 请求成功")
-//                return
-//            }
-//            
-//        })
-//        HttpSwift.post(url, params: ["post": "POST Network"], callback: { (data, response, error) -> Void in
-//            let string = data
-//            
-//            //使用guard判断
-//            guard error != nil else{
-//                print(data)
-//                print("POST 2 请求成功 \(string)")
-//                return
-//            }
-//        })
-//        
-//        HttpSwift.get(url, callback: { (data, response, error) -> Void in
-//            let string = data
-//            
-//            //使用guard判断
-//            guard error != nil else{
-//                print(data)
-//                print("GET不带参数 请求成功 \(string)")
-//                return
-//            }
-//        })
+       HttpSwift.request("POST", url: url, params: ["post": "value"]) { (data, response, error) -> Void in
+           //使用guard判断
+           guard error != nil else{
+               print(data)
+               
+               return
+           }
+           
+       }
+       
+       //let url = "http://pitayaswift.sinaapp.com/pitaya.php"
+       
+       HttpSwift.post(url, callback: { (data, response, error) -> Void in
+           //使用guard判断
+           guard error != nil else{
+               print(data)
+               print("POST不带参数 请求成功")
+               return
+           }
+           
+       })
+       HttpSwift.post(url, params: ["post": "POST Network"], callback: { (data, response, error) -> Void in
+           let string = data
+           
+           //使用guard判断
+           guard error != nil else{
+               print(data)
+               print("POST 2 请求成功 \(string)")
+               return
+           }
+       })
+       
+       HttpSwift.get(url, callback: { (data, response, error) -> Void in
+           let string = data
+           
+           //使用guard判断
+           guard error != nil else{
+               print(data)
+               print("GET不带参数 请求成功 \(string)")
+               return
+           }
+       })
         HttpSwift.get(url, params: ["get": "POST Network"], callback: { (data, response, error) -> Void in
             let string = data
             

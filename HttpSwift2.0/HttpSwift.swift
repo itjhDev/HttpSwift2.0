@@ -149,6 +149,23 @@ class HttpSwiftManager {
         
         return components
     }
+
+    func queryCarComponents(key: String, _ value: AnyObject) -> [(String, String)] {
+        var components: [(String, String)] = []
+        if let dictionary = value as? [String: AnyObject] {
+            for (nestedKey, value) in dictionary {
+                components += queryComponents("\(key)[\(nestedKey)]", value)
+            }
+        } else if let array = value as? [AnyObject] {
+            for value in array {
+                components += queryCarComponents("\(key)", value)
+            }
+        } else {
+            components.appendContentsOf([(escape(key), escape("\(value)"))])
+        }
+        
+        return components
+    }
     
     
     func escape(string: String) -> String {
